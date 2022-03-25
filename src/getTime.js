@@ -1,8 +1,9 @@
 const axios = require('axios');
 const format = require('youtube-duration-format');
-const {addTime} = require('../utils/addTime');
+const { addTime } = require('../utils/addTime');
 
 const API_KEY = process.env.API_KEY;
+axios.defaults.baseURL = 'https://youtube.googleapis.com';
 
 async function getTime(videos, start, end) {
     let videoLen = end - start;
@@ -12,7 +13,7 @@ async function getTime(videos, start, end) {
         let videoString = "";
         videoString = videos[start + 50 * j];
         for (let i = start + 50 * j + 1; i < start + 50 * (j + 1); i++) {
-            videoString = videoString + ',' + videos[i]; 
+            videoString = videoString + ',' + videos[i];
         }
         const resp = await axios.get("/youtube/v3/videos", {
             params: {
@@ -52,4 +53,4 @@ async function getTime(videos, start, end) {
     console.log(time);
 }
 
-module.exports = {getTime};
+module.exports = { getTime };
