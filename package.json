@@ -1,0 +1,29 @@
+{
+  "name": "yt-playlist-length",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssahibsingh/yt-playlist-length.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssahibsingh/yt-playlist-length/issues"
+  },
+  "homepage": "https://github.com/ssahibsingh/yt-playlist-length#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "googleapis": "^98.0.0",
+    "node-fetch": "^3.2.3",
+    "timelite": "^1.0.0",
+    "youtube-duration-format": "^0.2.0"
+  }
+}
