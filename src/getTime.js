@@ -50,7 +50,7 @@ async function getTime(videos, start, end) {
         }
         time = addTime(time, dur);
     })
-    console.log(time);
+    return time;
 }
 
-module.exports = { getTime };
+module.exports = {getTime};
