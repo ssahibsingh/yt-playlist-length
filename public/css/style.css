@@ -1,0 +1,33 @@
+.title{
+    margin: 0 0 60px 0;
+}
+
+.icon{
+    width: 30px;
+}
+
+.range{
+    margin: 20px auto;   
+}
+
+.range-heading{
+    font-size: 22px;
+}
+.error {
+    font-size: 17px;
+    color: rgb(255, 67, 67);
+}
+
+.stats-heading{
+    font-size: 35px;
+}
+
+.stats{
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.stats-text{
+    font-size: 25px;
+}

@@ -55,7 +55,7 @@ async function getData(ID) {
         })
     }
     if (videos.length === totalVideos) {
-        return videos;
+        return [totalVideos,videos];
     }
 }
 
