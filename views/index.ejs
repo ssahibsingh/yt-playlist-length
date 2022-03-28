@@ -5,7 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="YouTube Playlist, YouTube, Playlist Length, Node.js, Express.js, Sahib Singh, EJS">
+    <meta name="author" content="Sahib Singh">
+    <!-- Primary Meta Tags -->
     <title>YouTube Playlist Length</title>
+    <meta name="title" content="YouTube Playlist Length">
+    <meta name="description" content="A YouTube Playlist Length Calculator made with the help of Node.js/Express.js.
+">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="YouTube Playlist Length">
+    <meta property="og:description" content="A YouTube Playlist Length Calculator made with the help of Node.js/Express.js.
+">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="YouTube Playlist Length">
+    <meta property="twitter:description" content="A YouTube Playlist Length Calculator made with the help of Node.js/Express.js.
+">
+
 
     <link rel="shortcut icon" href="img/playlist.png" type="image/x-icon">
 
@@ -27,8 +49,8 @@
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-8">
                         <h6 class="text-muted">Enter Playlist Link</h6>
                         <input class="form-control form-control-lg" name="url" type="text"
-                        placeholder="https://www.youtube.com/playlist?list=ID" autocomplete="off" autofocus="true"
-                        required>
+                            placeholder="https://www.youtube.com/playlist?list=ID" autocomplete="off" autofocus="true"
+                            required>
                     </div>
                 </div>
 
@@ -46,9 +68,11 @@
                     </div>
                 </div>
                 <button class="btn btn-dark" type="submit">Get Length</button>
-                <div class="alert col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 mx-auto error">
-                    <%= error %>
-                </div>
+                <% if (error) { %>
+                    <div class="alert col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 mx-auto error">
+                        <%= error %>
+                    </div>
+                    <% } %>
             </form>
         </div>
         <div>
@@ -58,9 +82,13 @@
                     <div class="col-lg-3 col-md-3 col-sm-3"></div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                         <% if(totalVideos && videoLen) { %>
-                            <p class="stats-text">Total Videos in Playlist: <span class="stats"><%= totalVideos %> </span></p>
-                            <p class="stats-text">Playlist Length: <span class="stats"><%= videoLen %> </span></p>
-                        <%} %>
+                            <p class="stats-text">Total Videos in Playlist: <span class="stats">
+                                    <%= totalVideos %>
+                                </span></p>
+                            <p class="stats-text">Playlist Length: <span class="stats">
+                                    <%= videoLen %>
+                                </span></p>
+                            <%} %>
                     </div>
                 </div>
             </div>
