@@ -2,7 +2,7 @@
 # YouTube Playlist Length
 A YouTube Playlist Length Calculator made with the help of Node.js/Express.js.
 ## Demo
-https://yt-playlist-leng.herokuapp.com/
+https://ytplaylist-len.up.railway.app/
 
 ## Feature
 - Get Length for any YouTube Playlist over custom Range.
@@ -48,4 +48,5 @@ To run this project, you will need to add the following environment variables to
 - [Express.js](https://expressjs.com/)
 - [EJS](https://ejs.co/#docs)
 - [Heroku Node.js](https://devcenter.heroku.com/categories/nodejs-support)
+- [Railways Node.js](https://docs.railway.app/deploy/builds)
 
